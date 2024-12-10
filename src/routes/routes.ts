@@ -3,7 +3,7 @@ import { getAddressComponents } from "../controllers/addressController";
 
 const router = express.Router();
 
-router.post("/address", getAddressComponents);
+router.post("/address/extract", getAddressComponents);
 
 
 export default router;

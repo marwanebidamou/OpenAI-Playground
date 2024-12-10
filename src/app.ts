@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
 import { PORT } from './config/env.config';
-import addressRouter from './routes/addressRoutes';
+import addressRouter from './routes/routes';
 
 const app: Application = express();
 
