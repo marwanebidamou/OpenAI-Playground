@@ -79,3 +79,15 @@ content-type: application/json
 {
     "message": "I'm wondering if my home city, Casablanca, is hot or cold now."
 }
+
+
+###
+POST http://localhost:5000/api/chat HTTP/1.1
+content-type: application/json
+
+{
+    "message": "is there snow in Fairfield, Iowa right now?"
+}
+
+
+###

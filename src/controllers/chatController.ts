@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import OpenAI from "openai";
-import { openAIFunctions } from "../utils/openAIFunctions";
+import { openAitools } from "../utils/openAIFunctions";
 import { fetchWeather } from "../services/weatherService";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 
@@ -24,15 +24,15 @@ export const generalChatAI = async (req: Request, res: Response): Promise<void> 
         const chatResult = await client.chat.completions.create({
             model: 'gpt-4o-mini',
             messages: messages,
-            functions: openAIFunctions, // Add function schema
+            tools: openAitools, // Add tools schema
         });
 
         // Check if the model suggests a function call
         const response = chatResult.choices[0].message;
-        if (response.function_call) {
-            switch (response.function_call?.name) {
+        if (response.tool_calls) {
+            switch (response.tool_calls[0].function.name) {
                 case 'fetchWeather':
-                    const fnArgs: { location: string } = JSON.parse(response.function_call.arguments);
+                    const fnArgs: { location: string } = JSON.parse(response.tool_calls[0].function.arguments);
                     const weatherData = await fetchWeather(fnArgs.location);
                     messages.push(
                         { role: 'system', content: 'Format weather data into a conversational response.' },
