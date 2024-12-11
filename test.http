@@ -55,10 +55,27 @@ content-type: application/json
 
 ##################### General chat #########################
 ###
-## Extract key poins ## 
 POST http://localhost:5000/api/chat HTTP/1.1
 content-type: application/json
 
 {
     "message": "Hey, why the sky is blue?"
+}
+
+###
+POST http://localhost:5000/api/chat HTTP/1.1
+content-type: application/json
+
+{
+    "message": "how's the weather in Fairfield, Iowa"
+}
+
+
+###
+
+POST http://localhost:5000/api/chat HTTP/1.1
+content-type: application/json
+
+{
+    "message": "I'm wondering if my home city, Casablanca, is hot or cold now."
 }
