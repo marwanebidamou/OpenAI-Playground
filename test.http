@@ -6,4 +6,49 @@ content-type: application/json
 }
 
 ###
+## Proofread any text ## 
+POST http://localhost:5000/api/text/proofread HTTP/1.1
+content-type: application/json
 
+{
+    "text": "Congratulatio, your applicaton is approved!"
+}
+
+
+###
+## Make text Friendly ## 
+POST http://localhost:5000/api/text/friendly HTTP/1.1
+content-type: application/json
+
+{
+    "text": "I won't be available tomorrow!"
+}
+
+###
+## Make text Professional ## 
+POST http://localhost:5000/api/text/professional HTTP/1.1
+content-type: application/json
+
+{
+    "text": "Hey, I was wondering if u could help me with this thing I’m working on? It’s kinda confusing and I’m stuck lol. Just let me know when you’re free. Thx"
+}
+
+
+###
+## Summarize text ## 
+POST http://localhost:5000/api/text/summarize HTTP/1.1
+content-type: application/json
+
+{
+    "text": "Last weekend, I went hiking with some friends at Yosemite National Park. We started early in the morning and followed the Mist Trail, which took us past beautiful waterfalls like Vernal Fall and Nevada Fall. The weather was perfect, and we even spotted some wildlife, including a deer and a hawk. After a long but enjoyable day, we returned to our campsite to cook dinner and relax under the stars."
+}
+
+
+###
+## Extract key poins ## 
+POST http://localhost:5000/api/text/key-points HTTP/1.1
+content-type: application/json
+
+{
+    "text": "Last weekend, I went hiking with some friends at Yosemite National Park. We started early in the morning and followed the Mist Trail, which took us past beautiful waterfalls like Vernal Fall and Nevada Fall. The weather was perfect, and we even spotted some wildlife, including a deer and a hawk. After a long but enjoyable day, we returned to our campsite to cook dinner and relax under the stars."
+}
