@@ -52,3 +52,13 @@ content-type: application/json
 {
     "text": "Last weekend, I went hiking with some friends at Yosemite National Park. We started early in the morning and followed the Mist Trail, which took us past beautiful waterfalls like Vernal Fall and Nevada Fall. The weather was perfect, and we even spotted some wildlife, including a deer and a hawk. After a long but enjoyable day, we returned to our campsite to cook dinner and relax under the stars."
 }
+
+##################### General chat #########################
+###
+## Extract key poins ## 
+POST http://localhost:5000/api/chat HTTP/1.1
+content-type: application/json
+
+{
+    "message": "Hey, why the sky is blue?"
+}
