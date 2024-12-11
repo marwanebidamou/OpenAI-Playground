@@ -35,6 +35,10 @@ src/
 
 ## Setup Instructions
 
+## Prerequisites
+- Node.js (v22 or later)
+- npm (v10 or later) or yarn
+
 1. Clone the repository:
 
    ```bash
@@ -52,9 +56,12 @@ src/
    Create a `.env` file in the root directory and provide your OpenAI API key and OpenWeatherMap API key:
 
    ```env
+   PORT=5000 # default port 
    OPENAI_API_KEY=your_openai_api_key
    WEATHER_MAP_API_KEY=your_openweathermap_api_key
    ```
+   Replace `PORT=5000` with your preferred port number.
+
 
 4. Run the application:
 
